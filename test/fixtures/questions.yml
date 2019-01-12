@@ -2,8 +2,8 @@
 
 one:
   question_text: MyString
-  test_id: 1
+  tests_id: 1
 
 two:
   question_text: MyString
-  test_id: 1
+  tests_id: 1

@@ -2,8 +2,10 @@
 
 one:
   title: MyString
-  complexity: 1
+  compexity: 1
+  categories_id: 1
 
 two:
   title: MyString
-  complexity: 1
+  compexity: 1
+  categories_id: 1

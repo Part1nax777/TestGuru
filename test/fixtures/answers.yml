@@ -2,10 +2,10 @@
 
 one:
   answer_text: MyString
-  question_id: 1
-  valid: false
+  questions_id: 1
+  correct: false
 
 two:
   answer_text: MyString
-  question_id: 1
-  valid: false
+  questions_id: 1
+  correct: false
