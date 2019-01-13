@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_12_112141) do
+ActiveRecord::Schema.define(version: 2019_01_13_113728) do
 
   create_table "answers", force: :cascade do |t|
-    t.string "answer_text", null: false
-    t.integer "questions_id", null: false
-    t.boolean "correct", default: false, null: false
+    t.string "body", null: false
+    t.boolean "correct", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "question_id"
@@ -29,8 +28,7 @@ ActiveRecord::Schema.define(version: 2019_01_12_112141) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string "question_text", null: false
-    t.integer "tests_id", null: false
+    t.string "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "test_id"
@@ -39,12 +37,11 @@ ActiveRecord::Schema.define(version: 2019_01_12_112141) do
 
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "compexity", default: 0
-    t.integer "categories_id", null: false
+    t.integer "complexity", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "categorie_id"
-    t.index ["categorie_id"], name: "index_tests_on_categorie_id"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
