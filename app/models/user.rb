@@ -1,4 +1,4 @@
 class User < ApplicationRecord(level)
   Test.joins('JOIN results ON results.test_id = tests.id')
-  .where('user_id = ? AND complexity = ?', id, level)
+    .where(results: { user_id: id }, complexity: level)
 end
