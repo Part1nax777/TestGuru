@@ -10,13 +10,19 @@ categories = Category.create!([
   { title: 'Институт' }
 ])
 
+users = User.create!([
+  { name: 'Алеша Попович' },
+  { name: 'Барон Мюнхаузен' },
+  { name: 'Винни Пух' }
+])
+
 tests = Test.create!([
-  { title: 'Математика', complexity: 3, category_id: categories[0].id },
-  { title: 'История', complexity: 2, category_id: categories[0].id },
-  { title: 'Право', complexity: 3, category_id: categories[1].id },
-  { title: 'Экономика', complexity: 1, category_id: categories[1].id },
-  { title: 'География', complexity: 1, category_id: categories[0].id },
-  { title: 'Программирование', complexity: 3, category_id: categories[1].id }
+  { title: 'Математика', complexity: 3, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'История', complexity: 2, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Право', complexity: 3, category_id: categories[1].id, author_id: users[1].id },
+  { title: 'Экономика', complexity: 1, category_id: categories[1].id, author_id: users[1].id },
+  { title: 'География', complexity: 1, category_id: categories[0].id, author_id: users[2].id },
+  { title: 'Программирование', complexity: 3, category_id: categories[1].id, author_id: users[2].id }
 ])
 
 questions = Question.create!([
@@ -39,8 +45,4 @@ answers = Answer.create!([
   { body: 'Assembler', question_id: questions[0].id }
 ])
 
-users = User.create!([
-  { name: 'Алеша Попович' },
-  { name: 'Барон Мюнхаузен' },
-  { name: 'Винни Пух' }
-])
+

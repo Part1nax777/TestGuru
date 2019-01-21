@@ -1,9 +1,10 @@
 class Test < ApplicationRecord
-  has_many :results
-  has_many :users, through :results
   belongs_to :category
+  belongs_to :author, class_name: 'User'
+  has_many :results, dependent: :destroy
+  has_many :users, through: :results, dependent: :destroy
   def self.sort_body_test_desc(title)
-    joins('JOIN categories ON test.category_id = categories.id').where(categories: { title: :category })
+    joins(:results).where(categories: { title: :title })
       .order(title: :desc).pluck(:title)
   end
 end
