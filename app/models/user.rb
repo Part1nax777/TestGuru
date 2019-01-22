@@ -5,4 +5,5 @@ class User < ApplicationRecord
     def tests_by_level(level)
       test.where(complexity: level)
     end
+  scope :tests_by_level, -> (level) { tests.where(complexity: level) }
 end
