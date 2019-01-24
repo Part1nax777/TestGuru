@@ -5,13 +5,18 @@ class Test < ApplicationRecord
   has_many :results, dependent: :destroy
   has_many :users, through: :results
 
+  validates :title, presence: true, uniqueness: { scope: :complexity, message: 'title with this complexity already exist' }
+  validates :complexity, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
+
   scope :light_test, -> { where(complexity: 0..1) }
   scope :middle_test, -> { where(complexity: 2..4) }
   scope :hard_test, -> { where(complexity: 5..Float::INFINITY) }
+  scope :test_complexity, ->(level) { where(complexity: level)}
+  scope :with_category, ->(title) { joins(:category).where(categories: { title: title }).order(title: :desc) }
 
-  scope :sort_body_test_desc, -> (title) { joins(:category).where(categories: { title: :title }).order(title: :desc) }
+private
 
-  validates :title, presence: true
-  validates :complexity, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
-  validates_uniqueness_of :title, scope: :complexity
+  def self.with_array(title)
+    with_category(title).pluck(:title)
+  end
 end
