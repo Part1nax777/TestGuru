@@ -14,8 +14,6 @@ class Test < ApplicationRecord
   scope :test_complexity, ->(level) { where(complexity: level)}
   scope :with_category, ->(title) { joins(:category).where(categories: { title: title }).order(title: :desc) }
 
-private
-
   def self.with_array(title)
     with_category(title).pluck(:title)
   end
