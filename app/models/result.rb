@@ -1,4 +1,4 @@
 class Result < ApplicationRecord
   belongs_to :test
-  brlongs_to :user
+  belongs_to :user
 end
