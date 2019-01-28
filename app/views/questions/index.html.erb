@@ -1,0 +1,6 @@
+<h2>Все вопросы из раздела: <%= @test.title %></h2>
+  <% @test.questions.each do |question| %>
+    <ul>
+      <li><%= question.body %></li>
+    </ul>
+  <% end %>
