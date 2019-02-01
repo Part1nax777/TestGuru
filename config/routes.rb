@@ -3,6 +3,5 @@ Rails.application.routes.draw do
   resources :tests do
     resources :questions, shallow: true
   end
-
-  resources :tests
+  root 'tests#index'
 end
