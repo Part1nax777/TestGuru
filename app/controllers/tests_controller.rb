@@ -47,8 +47,6 @@ private
     render plain: 'вопрос не найден'
   end
 
-private
-
   def find_test
     @test = Test.find(params[:id])
   end
