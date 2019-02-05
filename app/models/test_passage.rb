@@ -15,11 +15,19 @@ class TestPassage < ApplicationRecord
   end
 
   def result_percent
-    (100 / test.questions.count)*correct_questions
+    ((100.0 / test.questions.count)*correct_questions).to_i
   end
 
   def successful_test?
     result_percent >= 85
+  end
+
+  def quantuty_questions
+    test.questions.count
+  end
+
+  def number_question
+    test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
 private
