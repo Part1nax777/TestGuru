@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
-      self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
   end
 
@@ -31,7 +31,6 @@ class TestPassage < ApplicationRecord
   end
 
 private
-
   def before_validation_set_current_question
     self.current_question = next_question
   end
