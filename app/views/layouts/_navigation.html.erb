@@ -1,0 +1,10 @@
+
+  <p class="nav user">Добро пожаловать, <b><%= current_user.name %></b> Guru</p>
+
+  <nav>
+    <ul class="nav bar navbar-nav">
+      <%= link_to 'TestGuru', root_path %>
+      <%= link_to 'Выход', logout_path, method: :delete %>
+    </ul>
+  </nav>
+
