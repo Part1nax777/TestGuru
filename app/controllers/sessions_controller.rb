@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to cookies[:target_path]
+      redirect_to cookies[:target_path] || root_path
+      cookies.delete :target_path
     else
       flash.now[:alert] = 'Ошибка, повторите ввод, либо зарегистрируйтесь'
       render :new

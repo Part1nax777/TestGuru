@@ -1,10 +1,11 @@
 class User < ApplicationRecord
-  VALID_EMAIL = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  VALID_EMAIL = /.+@.+\..+/i
 
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
 
+  validates :name, presence: true
   validates :email, presence: true,
                     format: VALID_EMAIL,
                     uniqueness: true
@@ -18,5 +19,4 @@ class User < ApplicationRecord
   def tests_complexity(level)
     tests.test_complexity(level)
   end
-
 end
