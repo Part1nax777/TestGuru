@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_test, only: %i[create new]
   before_action :find_question, only: %i[show destroy edit update]
 
@@ -34,7 +35,7 @@ class QuestionsController < ApplicationController
     redirect_to test_path(@question.test)
   end
 
-private
+  private
 
   def find_test
     @test = Test.find(params[:test_id])

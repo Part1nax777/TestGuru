@@ -6,7 +6,8 @@ class Answer < ApplicationRecord
 
   scope :correct, -> { where(correct: true) }
 
-private
+  private
+
   def question_count_error
     errors.add(:question, 'maximum answers must be < 4') if question.answers.count >= 4
   end
