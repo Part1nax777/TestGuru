@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
-                                   controllers: { registrations: 'registrations' }
+                                   controllers: { sessions: 'user/sessions' }
   root 'tests#index'
 
   namespace :admin do
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :tests do
+  resources :tests, only: :index do
     post :start, on: :member
   end
 end

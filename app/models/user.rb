@@ -1,5 +1,9 @@
 class User < ApplicationRecord
 
+  has_many :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages, dependent: :destroy
+  has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
+
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -8,15 +12,15 @@ class User < ApplicationRecord
          :trackable,
          :confirmable
 
-  has_many :test_passages, dependent: :destroy
-  has_many :tests, through: :test_passages, dependent: :destroy
-  has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
-
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test: test)
   end
 
   def tests_complexity(level)
     tests.test_complexity(level)
+  end
+
+  def admin?
+    is_a?(Admin)
   end
 end
