@@ -10,7 +10,13 @@
   </head>
 
   <body>
-    <%= render 'layouts/navigation' %>
+    <% if user_signed_in? %>
+    <p class="nav user">
+      Добро пожаловать, <b><%= current_user.email %></b> Guru |
+      <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
+    </p>
+    <% end %>
+    <%= render 'shared/flash' %>
     <%= yield %>
     <div>
       <br>
