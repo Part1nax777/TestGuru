@@ -1,0 +1,140 @@
+ru:
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать Вопрос"
+        update: "Обновить Вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+    label:
+      test:
+        title: "Название"
+        complexity: "Сложность"
+        category_id: "Категория"
+      question:
+        body: "Текст вопроса"
+      answer:
+        body: "Текст ответа"
+        correct: "Верно"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      test_name: "Название теста:"
+      test_complexity: "Сложность:"
+      test_questions: "Количество вопросов:"
+      test_movie: "Действия:"
+    test:
+      level:
+        easy: "лёгкий"
+        elementary: "элементарный"
+        advanced: "продвинутый"
+        hard: "тяжелый"
+        hero: "нереальный"
+      start: "Начать"
+  layouts:
+    application:
+      welcome: "Добро пожаловать"
+      exit: "Выход"
+  test_passages:
+    show:
+      passage_test: "Прохождение теста "
+      question: "Вопрос № "
+      from: "из"
+      next: "Следующий"
+    result:
+      test: "Тест %{title} пройден"
+      result: "Результат"
+      sucсess: "Успешно пройден"
+      unsuccess: "Не пройден"
+      to_tests: "Вернуться к тестам"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  admin:
+    tests:
+      create:
+        success: "Успешно создан"
+      update:
+        success: "Успешно изменен"
+      destroy:
+        success: "Успешно удален"
+      edit:
+        header: "Обновить тест"
+        back: "Назад"
+      new:
+        header: "Новый тест"
+        back: "Назад"
+      index:
+        header: "Доступные тесты"
+        new_test: "Новый тест"
+        test_name: "Название теста:"
+        test_complexity: "Сложность:"
+        test_questions: "Количество вопросов:"
+        test_movie: "Действия:"
+      show:
+        test_title: "Название:"
+        test_complexity: "Сложность:"
+        link_new_question: "Новый вопрос"
+        questions: "Вопросы:"
+        movies: "Действия:"
+        edit: "Редактировать"
+        back: "Назад"
+      test:
+        level:
+          easy: "лёгкий"
+          elementary: "элементарный"
+          advanced: "продвинутый"
+          hard: "тяжелый"
+          hero: "нереальный"
+    questions:
+      show:
+        new_answer: "Новый ответ"
+        edit: "Редактировать"
+        back: "Назад"
+        question: "Вопрос № "
+        answers: "Ответы"
+      new:
+        back: "Назад"
+      edit:
+        back: "Назад"
+    answers:
+      show:
+        title: "Вопрос"
+        answer: "Ответ: "
+        correct: "Верно: "
+        back: "Назад"
+      new:
+        title: "Новый ответ"
+        back: "Назад"
+      edit:
+        title: "Редактирование ответа"
+        back: "Назад"
+    nav:
+      exit: "Выход"
+      welcome: "Добро пожаловать"
+      admin_panel: "Панель администратора TestGuru"
+    actions:
+      show: "Просмотреть"
+      edit: "Редактировать"
+      delete: "Удалить"
+    confirm: "Вы уверены?"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы выполнили тест"
+
+
+
+

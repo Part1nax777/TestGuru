@@ -1,33 +1,138 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        complexity: "Complexity"
+        category_id: "Category"
+    submit:
+      question:
+        create: "Create Question"
+        update: "Update Question"
+    label:
+      question:
+        body: "Question text"
+    label:
+      answer:
+        body: "Answer text"
+        correct: "Correct"
+    submit:
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      test_name: "Test Title:"
+      test_complexity: "Complexity:"
+      test_questions: "Quantity questions:"
+      test_movie: "Movies:"
+    test:
+      level:
+        easy: "easy"
+        elementary: "elementary"
+        advanced: "advanced"
+        hard: "hard"
+        hero: "hero"
+      start: "Start"
+  layouts:
+    application:
+      welcome: "Welcome"
+      exit: "Exit"
+  test_passages:
+    show:
+      passage_test: "Passage test "
+      question: "Question № "
+      from: "from"
+      next: "Next"
+    result:
+      test: "Test %{title} completed"
+      result: "Result"
+      success: "Success completed"
+      unsuccess: "Unsuccessfully completed"
+      to_tests: "Back to tests"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  admin:
+    tests:
+      create:
+        success: "Success create"
+      update:
+        success: "Success update"
+      destroy:
+        success: "Success delete"
+      edit:
+        header: "Update test"
+        back: "Back"
+      new:
+        header: "New test"
+        back: "Back"
+      index:
+        header: "Tricky Tests"
+        new_test: "New test"
+        test_name: "Test Title:"
+        test_complexity: "Complexity:"
+        test_questions: "Quantity questions:"
+        test_movie: "Movies:"
+      show:
+        test_title: "Title:"
+        test_complexity: "Complexity:"
+        link_new_question: "New question"
+        questions: "Questions:"
+        movies: "Movies"
+        edit: "Edit"
+        back: "Back"
+      test:
+        level:
+          easy: "easy"
+          elementary: "elementary"
+          advanced: "advanced"
+          hard: "hard"
+          hero: "hero"
+    questions:
+      show:
+        new_answer: "New answer"
+        edit: "Edit"
+        back: "Back"
+        question: "Question № "
+        answers: "Answers"
+      new:
+        back: "Back"
+      edit:
+        back: "Back"
+    answers:
+      show:
+        title: "Queston"
+        answer: "Answer: "
+        correct: "Correct: "
+        back: "Back"
+      new:
+        title: "New answer"
+        back: "Back"
+      edit:
+        title: "Correct answer"
+        back: "Back"
+    nav:
+      exit: "Exit"
+      welcome: "Welcome"
+      admin_panel: "TestGuru Admin Panel"
+    actions:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+    confirm: "Are you sure?"
+
+  test_mailer:
+    completed_test:
+      subject: "You completed test"

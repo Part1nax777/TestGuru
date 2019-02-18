@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    attributes:
+      test:
+        title: 'Название'
+        complexity: 'Сложность'
+      question:
+        body: 'Текст вопроса'
+      answer:
+        body: 'Текст ответа'

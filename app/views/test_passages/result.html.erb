@@ -1,17 +1,17 @@
-<h1>Тест <%= @test_passage.test.title %> пройден</h1>
+<h1><%= t('.test', title: @test_passage.test.title) %></h1>
 
-  <h3>Результат</h3>
+  <h3><%= t('.result') %></h3>
 
   <% if @test_passage.successful_test? %>
     <p id="true">
-      <strong>Тест пройден</strong><br>
+      <strong><%= t('.success') %></strong><br>
       <%= @test_passage.result_percent  %>
     </p>
   <% else %>
     <p id="false">
-      <strong>Тест не пройден</strong><br>
+      <strong><%= t('.unsuccess') %></strong><br>
       <%= @test_passage.result_percent %>
     </p>
   <% end %>
 
-  <p><%= link_to 'Back to tests', root_path %></p>
+  <p><%= link_to t('.to_tests'), root_path %></p>
