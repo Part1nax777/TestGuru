@@ -44,7 +44,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def rescue_with_question_not_found
-    render plain: 'вопрос не найден'
+    render plain: t('.error')
   end
 
   def set_test

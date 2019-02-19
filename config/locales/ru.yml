@@ -21,14 +21,24 @@ ru:
       answer:
         body: "Текст ответа"
         correct: "Верно"
+      user:
+        email: "Почта"
+        password: "Пароль"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password_confirmation: "Подтверждение пароля"
+        remember_me: "Запомнить меня"
+    select:
+      test:
+        prompt: "Выберите категорию"
 
   tests:
     index:
       header: "Доступные тесты"
-      test_name: "Название теста:"
-      test_complexity: "Сложность:"
-      test_questions: "Количество вопросов:"
-      test_movie: "Действия:"
+      name: "Название теста:"
+      complexity: "Сложность:"
+      questions: "Количество вопросов:"
+      movie: "Действия:"
     test:
       level:
         easy: "лёгкий"
@@ -79,18 +89,19 @@ ru:
       index:
         header: "Доступные тесты"
         new_test: "Новый тест"
-        test_name: "Название теста:"
-        test_complexity: "Сложность:"
-        test_questions: "Количество вопросов:"
-        test_movie: "Действия:"
+        name: "Название теста:"
+        complexity: "Сложность:"
+        questions: "Количество вопросов:"
+        movie: "Действия:"
       show:
-        test_title: "Название:"
-        test_complexity: "Сложность:"
+        title: "Название:"
+        complexity: "Сложность:"
         link_new_question: "Новый вопрос"
         questions: "Вопросы:"
         movies: "Действия:"
         edit: "Редактировать"
         back: "Назад"
+        error: "Вопрос не найден"
       test:
         level:
           easy: "лёгкий"
@@ -135,6 +146,21 @@ ru:
     completed_test:
       subject: "Вы выполнили тест"
 
-
-
-
+  devise:
+    sessions:
+      new:
+        header: "Вход в приложение"
+        sign_in: "Войти"
+    registrations:
+      new:
+        header: "Регистрация"
+        characters_minimum: "символов минимум"
+        sign_up: "Зарегистрироваться"
+    passwords:
+      new:
+        header: "Забыли ваш пароль?"
+        send: "Выслать инструкции для восстановления"
+    confirmations:
+      new:
+        header: "Переслать инструкции по восстановлению"
+        send: "Переслать инструкции по восстановлению"

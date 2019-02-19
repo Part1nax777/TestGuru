@@ -5,34 +5,40 @@ en:
       test:
         create: "Create test"
         update: "Update test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
     label:
       test:
         title: "Title"
         complexity: "Complexity"
         category_id: "Category"
-    submit:
-      question:
-        create: "Create Question"
-        update: "Update Question"
-    label:
-      question:
-        body: "Question text"
-    label:
       answer:
         body: "Answer text"
         correct: "Correct"
-    submit:
-      answer:
-        create: "Create answer"
-        update: "Update answer"
+      question:
+        body: "Question text"
+      user:
+        email: "Email"
+        password: "Password"
+        first_name: "First name"
+        last_name: "Last name"
+        password_confirmation: "Password confirmation"
+    select:
+      test:
+        prompt: "Please select category"
+
 
   tests:
     index:
       header: "Tricky Tests"
-      test_name: "Test Title:"
-      test_complexity: "Complexity:"
-      test_questions: "Quantity questions:"
-      test_movie: "Movies:"
+      name: "Test Title:"
+      complexity: "Complexity:"
+      questions: "Quantity questions:"
+      movie: "Movies:"
     test:
       level:
         easy: "easy"
@@ -81,18 +87,19 @@ en:
       index:
         header: "Tricky Tests"
         new_test: "New test"
-        test_name: "Test Title:"
-        test_complexity: "Complexity:"
-        test_questions: "Quantity questions:"
-        test_movie: "Movies:"
+        name: "Test Title:"
+        complexity: "Complexity:"
+        questions: "Quantity questions:"
+        movie: "Movies:"
       show:
-        test_title: "Title:"
-        test_complexity: "Complexity:"
+        title: "Title:"
+        complexity: "Complexity:"
         link_new_question: "New question"
         questions: "Questions:"
         movies: "Movies"
         edit: "Edit"
         back: "Back"
+        error: "Question not found"
       test:
         level:
           easy: "easy"
@@ -136,3 +143,22 @@ en:
   test_mailer:
     completed_test:
       subject: "You completed test"
+
+  devise:
+    sessions:
+      new:
+        header: "Enter to attachment"
+        sign_in: "Enter"
+    registrations:
+      new:
+        header: "Registration"
+        characters_minimum: "character minimum"
+        sign_up: "Registration"
+    passwords:
+      new:
+        header: "Forgot your password?"
+        send: "Send me reset password instructions"
+    confirmations:
+      new:
+        header: "Resend confirmation instructions"
+        send: "Resend confirmation instructions"
