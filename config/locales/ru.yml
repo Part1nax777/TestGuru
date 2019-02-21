@@ -146,21 +146,3 @@ ru:
     completed_test:
       subject: "Вы выполнили тест"
 
-  devise:
-    sessions:
-      new:
-        header: "Вход в приложение"
-        sign_in: "Войти"
-    registrations:
-      new:
-        header: "Регистрация"
-        characters_minimum: "символов минимум"
-        sign_up: "Зарегистрироваться"
-    passwords:
-      new:
-        header: "Забыли ваш пароль?"
-        send: "Выслать инструкции для восстановления"
-    confirmations:
-      new:
-        header: "Переслать инструкции по восстановлению"
-        send: "Переслать инструкции по восстановлению"

@@ -144,21 +144,3 @@ en:
     completed_test:
       subject: "You completed test"
 
-  devise:
-    sessions:
-      new:
-        header: "Enter to attachment"
-        sign_in: "Enter"
-    registrations:
-      new:
-        header: "Registration"
-        characters_minimum: "character minimum"
-        sign_up: "Registration"
-    passwords:
-      new:
-        header: "Forgot your password?"
-        send: "Send me reset password instructions"
-    confirmations:
-      new:
-        header: "Resend confirmation instructions"
-        send: "Resend confirmation instructions"
