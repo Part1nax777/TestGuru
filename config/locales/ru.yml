@@ -71,6 +71,12 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      exit: "Выход"
+      welcome: "Добро пожаловать"
+      login: "Войти"
+      signup: "Зарегистрироваться"
+      admin_panel: "Панель администратора"
 
   admin:
     tests:
@@ -133,9 +139,8 @@ ru:
         title: "Редактирование ответа"
         back: "Назад"
     nav:
-      exit: "Выход"
-      welcome: "Добро пожаловать"
       admin_panel: "Панель администратора TestGuru"
+      exit: "Выход"
     actions:
       show: "Просмотреть"
       edit: "Редактировать"

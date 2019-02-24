@@ -1,6 +1,10 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center">
+  <div class="col col-md-4">
 
-<%= render 'form' %>
+    <h1 class="text-center"><%= t('.header') %></h1>
 
-<%= link_to t('.back'), admin_tests_path %>
+    <%= render 'form' %>
 
+    <%= link_to t('.back'), admin_tests_path %>
+  </div>
+</div>

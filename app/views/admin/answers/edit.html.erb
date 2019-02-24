@@ -1,8 +1,12 @@
-<h1><%= t('.title') %></h1>
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <h1 class="text-center"><%= t('.title') %></h1>
 
-<p>
-  <%= @answer.question.body %>
-</p>
+    <p>
+      <%= @answer.question.body %>
+    </p>
 
-<%= render 'form' %>
-<%= link_to t('.back'), admin_question_path(@answer.question) %>
+    <%= render 'form' %>
+    <%= link_to t('.back'), admin_question_path(@answer.question) %>
+  </div>
+</div>

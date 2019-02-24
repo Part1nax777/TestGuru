@@ -1,14 +1,16 @@
 <%= form_with model: [:admin, @test], local: true do |form| %>
   <%= render 'shared/errors', resource: @test %>
 
+  <form>
+    <div class="form-group">
     <p>
       <%= form.label :title %>
-      <%= form.text_field :title %>
+      <%= form.text_field :title, class: 'form-control' %>
     </p>
 
     <p>
       <%= form.label :complexity %>
-      <%= form.text_field :complexity %>
+      <%= form.text_field :complexity, class: 'form-control' %>
     </p>
 
     <p>
@@ -16,5 +18,7 @@
       <%= form.collection_select :category_id, Category.all, :id, :title,  promt: true %>
     </p>
 
-    <p><%= form.submit %></p>
+    <%= form.submit class: 'btn btn-primary' %>
+    </div>
+  </form>
 <% end %>

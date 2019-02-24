@@ -1,14 +1,20 @@
-<h2><%= t('.question') %><%= @question.id %></h2>
-  <ul>
-    <li><%= @question.body %></li>
-  </ul>
+<div class="row justify-content-center">
+  <div class="col col-md-4">
 
-  <h3><%= t('.answers') %></h3>
-    <%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+    <h2 class="text-center"><%= t('.question') %><%= @question.id %></h2>
+      <ul>
+        <li><%= @question.body %></li>
+      </ul>
+
+    <h3><%= t('.answers') %></h3>
+      <%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
 
     <ol>
       <%= render @question.answers %>
     </ol>
 
-<%= link_to t('.edit'), edit_admin_question_path(@question) %>
-<%= link_to t('.back'), admin_test_path(@question.test) %>
+
+    <%= link_to t('.edit'), edit_admin_question_path(@question) %>
+    <%= link_to t('.back'), admin_test_path(@question.test) %>
+  </div>
+</div>

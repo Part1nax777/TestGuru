@@ -1,17 +1,23 @@
-<h1><%= t('.test', title: @test_passage.test.title) %></h1>
+<div class="row justify-content-center">
+  <div class="col col-md-6">
 
-  <h3><%= t('.result') %></h3>
+    <h1 class="text-center"><%= t('.test', title: @test_passage.test.title) %></h1>
 
-  <% if @test_passage.successful_test? %>
-    <p id="true">
-      <strong><%= t('.success') %></strong><br>
-      <%= @test_passage.result_percent  %>
-    </p>
-  <% else %>
-    <p id="false">
-      <strong><%= t('.unsuccess') %></strong><br>
-      <%= @test_passage.result_percent %>
-    </p>
-  <% end %>
+      <h5 class="text-center"><%= t('.result') %></h5>
 
-  <p><%= link_to t('.to_tests'), root_path %></p>
+      <% if @test_passage.successful_test? %>
+        <p class="true">
+          <%= t('.success') %>
+          <%= @test_passage.result_percent %>
+        </p>
+      <% else %>
+        <p class="false">
+          <strong><%= t('.unsuccess') %></strong><br>
+          <%= @test_passage.result_percent %>
+        </p>
+      <% end %>
+
+      <p><%= link_to t('.to_tests'), root_path %></p>
+
+  </div>
+</div>
