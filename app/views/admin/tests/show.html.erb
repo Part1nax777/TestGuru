@@ -1,23 +1,29 @@
-<p>
-  <strong><%= t('.title') %></strong>
-  <%= @test.title %>
-</p>
+<div class="row justify-content-center">
+  <div class="col col-md-4">
 
-<p>
-  <strong><%= t('.complexity') %></strong>
-  <%= @test.complexity %>
-</p>
+    <p>
+      <strong><%= t('.title') %></strong>
+      <%= @test.title %>
+    </p>
 
-<p>
-  <%= link_to t('.link_new_question'), new_admin_test_question_path(@test) %>
-</p>
+    <p>
+      <strong><%= t('.complexity') %></strong>
+      <%= @test.complexity %>
+    </p>
 
-<table>
-  <tr>
-    <th><%= t('.questions') %></th>
-    <th colspan="3"><%= t('.movies') %></th>
-    <%= render @test.questions %>
-</table>
+    <p>
+      <%= link_to t('.link_new_question'), new_admin_test_question_path(@test) %>
+    </p>
 
-<%= link_to t('.edit'), edit_admin_test_path(@test) %>
-<%= link_to t('.back'), admin_tests_path %>
+    <table class="table table-borderless">
+      <tr>
+        <th class="text-center"><%= t('.questions') %></th>
+        <th colspan="3" class="text-center"><%= t('.movies') %></th>
+        <%= render @test.questions %>
+    </table>
+
+    <%= link_to t('.edit'), edit_admin_test_path(@test) %>
+    <%= link_to t('.back'), admin_tests_path %>
+
+  </div>
+</div>

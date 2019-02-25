@@ -1,6 +1,10 @@
-<tr>
-  <td><%= test.title %></td>
+<div class="row justify-content-center">
+
+<tr class="text-left">
+  <td ><%= test.title %></td>
   <td><%= t(".level.#{test_level(test)}") %></td>
-  <td><%= test.questions.count %></td>
-  <td><%= button_to t('.start'), start_test_path(test) %></td>
+  <td class="text-center"><%= test.questions.count %></td>
+  <td><%= button_to t('.start'), start_test_path(test), class: 'btn btn-indigo btn-sm m-0' %></td>
 </tr>
+
+</div>

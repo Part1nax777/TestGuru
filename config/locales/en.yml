@@ -69,6 +69,12 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      exit: "Exit"
+      welcome: "Welcome"
+      login: "Log in"
+      signup: "Sign up"
+      admin_panel: "Admin panel"
 
   admin:
     tests:
@@ -131,9 +137,8 @@ en:
         title: "Correct answer"
         back: "Back"
     nav:
-      exit: "Exit"
-      welcome: "Welcome"
       admin_panel: "TestGuru Admin Panel"
+      exit: "Exit"
     actions:
       show: "Show"
       edit: "Edit"
