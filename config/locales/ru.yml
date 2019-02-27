@@ -64,7 +64,7 @@ ru:
       unsuccess: "Не пройден"
       to_tests: "Вернуться к тестам"
     gist:
-      success: "Gist успешно сохранен"
+      success: "Gist успешно сохранен %{link}"
       failure: "Во время сохранения gist произошла ошибка"
 
   shared:
