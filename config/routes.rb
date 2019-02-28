@@ -10,6 +10,7 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
+    resources :gists, only: %i[index show destroy]
   end
 
   resources :test_passages, only: %i[show update] do

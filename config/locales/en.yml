@@ -151,6 +151,10 @@ en:
       edit: "Edit"
       delete: "Delete"
     confirm: "Are you sure?"
+    gists:
+      question: "Question:"
+      user_email: "User email:"
+      url: "Link:"
 
   test_mailer:
     completed_test:

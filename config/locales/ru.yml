@@ -153,6 +153,10 @@ ru:
       edit: "Редактировать"
       delete: "Удалить"
     confirm: "Вы уверены?"
+    gists:
+      question: "Вопрос:"
+      user_email: "Почта пользователя:"
+      url: "Ссылка:"
 
   test_mailer:
     completed_test:

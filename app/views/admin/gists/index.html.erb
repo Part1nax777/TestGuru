@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <div class="col col-md-6">
+
+    <table class="table table-borderless">
+      <tr>
+        <th class="text-center"><%= t('admin.gists.question') %></th>
+        <th class="text-center"><%= t('admin.gists.user_email') %></th>
+        <th class="text-center"><%= t('admin.gists.url') %></th>
+      </tr>
+
+      <%= render @gists %>
+    </table>
+  </div>
+</div>

@@ -19,6 +19,7 @@ class TestPassagesController < ApplicationController
 
   def gist
     result = GistQuestionService.new(@test_passage.current_question).call
+    Gist.create(user: current_user, question: @test_passage.current_question, gist_url: result.html_url)
 
     if result.present?
       flash[:notice] = t('.success', link: (view_context.link_to("https://github.com", result.html_url, target: '_blank')))
