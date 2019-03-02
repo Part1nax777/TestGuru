@@ -7,7 +7,8 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    gist = @client.create_gist(gist_params)
+    GistService.new(gist)
   end
 
   private
@@ -24,13 +25,10 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.body]
-    content += @question.answers.pluck(:body)
-    content.join("\n")
+    [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 
   def octokit_client
-    client = Octokit::Client.new(access_token: ENV['SECRET_KEY'])
+    Octokit::Client.new(access_token: ENV['GIST_TOKEN'])
   end
-
 end
