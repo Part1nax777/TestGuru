@@ -8,7 +8,7 @@ class GistQuestionService
 
   def call
     gist = @client.create_gist(gist_params)
-    GistService.new(gist)
+    ResultObject.new(gist)
   end
 
   private
@@ -30,5 +30,19 @@ class GistQuestionService
 
   def octokit_client
     Octokit::Client.new(access_token: ENV['GIST_TOKEN'])
+  end
+end
+
+class ResultObject
+  def initialize(result)
+    @result = result
+  end
+
+  def success?
+    @result.present?
+  end
+
+  def html_url
+    @result.html_url
   end
 end
