@@ -1,5 +1,7 @@
 class GistQuestionService
 
+  ResultObject = Struct.new(:success?, :html_url)
+
   def initialize(question, client = octokit_client)
     @question = question
     @test = @question.test
@@ -8,7 +10,7 @@ class GistQuestionService
 
   def call
     gist = @client.create_gist(gist_params)
-    ResultObject.new(gist)
+    ResultObject.new(gist.html_url.present?, gist.html_url)
   end
 
   private
@@ -33,16 +35,3 @@ class GistQuestionService
   end
 end
 
-class ResultObject
-  def initialize(result)
-    @result = result
-  end
-
-  def success?
-    @result.present?
-  end
-
-  def html_url
-    @result.html_url
-  end
-end
