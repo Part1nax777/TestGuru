@@ -63,6 +63,9 @@ en:
       success: "Success completed"
       unsuccess: "Unsuccessfully completed"
       to_tests: "Back to tests"
+    gist:
+      success: "Gist save success"
+      failure: "Gist save failure"
 
   shared:
     errors:
@@ -75,6 +78,10 @@ en:
       login: "Log in"
       signup: "Sign up"
       admin_panel: "Admin panel"
+
+  services:
+    gist_question_service:
+      description_message: "Question on test %{title} from TestGuru"
 
   admin:
     tests:
@@ -144,6 +151,10 @@ en:
       edit: "Edit"
       delete: "Delete"
     confirm: "Are you sure?"
+    gists:
+      question: "Question:"
+      user_email: "User email:"
+      url: "Link:"
 
   test_mailer:
     completed_test:

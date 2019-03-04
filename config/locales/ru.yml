@@ -63,6 +63,9 @@ ru:
       sucсess: "Успешно пройден"
       unsuccess: "Не пройден"
       to_tests: "Вернуться к тестам"
+    gist:
+      success: "Gist успешно сохранен %{link}"
+      failure: "Во время сохранения gist произошла ошибка"
 
   shared:
     errors:
@@ -77,6 +80,10 @@ ru:
       login: "Войти"
       signup: "Зарегистрироваться"
       admin_panel: "Панель администратора"
+
+  services:
+    gist_question_service:
+      description_message: "Вопрос по тесту %{title} от TestGuru"
 
   admin:
     tests:
@@ -146,6 +153,10 @@ ru:
       edit: "Редактировать"
       delete: "Удалить"
     confirm: "Вы уверены?"
+    gists:
+      question: "Вопрос:"
+      user_email: "Почта пользователя:"
+      url: "Ссылка:"
 
   test_mailer:
     completed_test:
