@@ -4,7 +4,10 @@
 
       <table class="table table-borderless">
         <tr>
-          <th><%= t('.name') %></th>
+          <th class="sort-by-title pointer"><%= t('.name') %>
+            <%= octicon 'arrow-up', class: 'text-success hide' %>
+            <%= octicon 'arrow-down', class: 'text-success hide' %>
+          </th>
           <th><%= t('.complexity') %></th>
           <th><%= t('.questions') %></th>
           <th><%= t('.movie') %></th>
