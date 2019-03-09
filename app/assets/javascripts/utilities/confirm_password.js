@@ -2,33 +2,38 @@ document.addEventListener('turbolinks:load', function() {
   var password_field = document.querySelector('.password');
   var confirmation_field = document.querySelector('.confirmation');
 
+    if (password_field && confirmation_field) {
     password_field.addEventListener('input', function() {
       showAlert(password_field, confirmation_field);
     }, false);
     confirmation_field.addEventListener('input', function() {
       showAlert(password_field, confirmation_field);
     }, false);
+  }
 })
 
 function showAlert(password, confirmation) {
 
+    var select_octicon = document.querySelector('.octicon-thumbsup');
+
     if (confirmation.value.length == 0) {
-      document.querySelector('.octicon-thumbsup').classList.add('hide');
+    select_octicon.classList.add('hide');
     }
     else if (confirmation.value !== password.value) {
-      danger();
+      danger(select_octicon);
     } else {
-      success();
+      success(select_octicon);
     }
 
-    function danger() {
-      document.querySelector('.octicon-thumbsup').classList.add('text-danger');
-      document.querySelector('.octicon-thumbsup').classList.remove('hide');
+    function danger(select_octicon) {
+      select_octicon.classList.remove('text-success');
+      select_octicon.classList.add('text-danger');
+      select_octicon.classList.remove('hide');
     }
 
-    function success() {
-      document.querySelector('.octicon-thumbsup').classList.remove('text-danger');
-      document.querySelector('.octicon-thumbsup').classList.add('text-success');
-      document.querySelector('.octicon-thumbsup').classList.remove('hide');
+    function success(select_octicon) {
+      select_octicon.classList.remove('text-danger');
+      select_octicon.classList.add('text-success');
+      select_octicon.classList.remove('hide');
     }
 }
