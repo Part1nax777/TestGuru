@@ -26,12 +26,13 @@
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> <%= t('devise.registrations.characters_minimum') %>)</em>
         <% end %><br />
-        <%= f.password_field :password, autofocus: true, class: 'form-control', placeholder: 'Enter password' %>
+        <%= f.password_field :password, autofocus: true, class: 'form-control password', placeholder: 'Enter password' %>
       </p>
 
       <p>
         <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, autofocus: true, class: 'form-control', placeholder: 'Confirm password' %>
+        <%= octicon 'thumbsup', class: 'hide' %>
+        <%= f.password_field :password_confirmation, autofocus: true, class: 'form-control confirmation', placeholder: 'Confirm password' %>
       </p>
 
       <div class="actions">
