@@ -5,7 +5,7 @@
 
       <p class="font-weight-bold">
         <%= t('.question') %><%= @test_passage.number_question %>
-        <%= t('.from') %> <%= @test_passage.quantuty_questions %>
+        <%= t('.from') %> <%= @test_passage.quantity_questions %>
       </p>
 
       <p>
@@ -22,6 +22,14 @@
 
         <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
         <p><%= form.submit t('.next'), class: 'btn btn-indigo btn-sm m-0' %></p>
+
+
+        <%= content_tag :div,
+                        class: "progress",
+                        data: { current_question: @test_passage.number_question,
+                              max_questions: @test_passage.quantity_questions } do %>
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar"></div>
+        <% end %>
       <% end %>
   </div>
 </div>
