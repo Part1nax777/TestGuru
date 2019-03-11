@@ -85,6 +85,8 @@ en:
 
   admin:
     tests:
+      form_inline:
+        submit: "Ok"
       create:
         success: "Success create"
       update:

@@ -22,7 +22,7 @@ class TestPassage < ApplicationRecord
     result_percent >= 85
   end
 
-  def quantuty_questions
+  def quantity_questions
     test.questions.count
   end
 

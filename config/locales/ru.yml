@@ -87,6 +87,8 @@ ru:
 
   admin:
     tests:
+      form_inline:
+        submit: "Ok"
       create:
         success: "Успешно создан"
       update:
