@@ -32,6 +32,13 @@ ru:
       test:
         prompt: "Выберите категорию"
 
+
+  feedbacks:
+    new:
+      feedback: "Обратная связь"
+    create:
+      success: "Сообщение отправлено"
+      unsuccess: "Сообщение не отправлено"
   tests:
     index:
       header: "Доступные тесты"
@@ -80,6 +87,7 @@ ru:
       login: "Войти"
       signup: "Зарегистрироваться"
       admin_panel: "Панель администратора"
+      feedback: "Обратная связь"
 
   services:
     gist_question_service:

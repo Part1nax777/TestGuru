@@ -4,11 +4,14 @@
   <span class="navbar-text">
     <% if user_signed_in? %>
       <%= t('.welcome') %>, <b><%= current_user.email %></b> Guru |
-      <%= link_to t('.exit'), destroy_user_session_path, method: :delete %>
 
       <% if current_user.type == 'Admin' %>
-          <%= link_to t('.admin_panel'), admin_tests_path %>
+        <%= link_to t('.admin_panel'), admin_tests_path %> |
+      <% else %>
+        <%= link_to t('.feedback'), new_feedback_path %> |
       <% end %>
+
+      <%= link_to t('.exit'), destroy_user_session_path, method: :delete %>
 
     <% else %>
       <%= link_to t('.login'), new_session_path(resource_name) %> |
