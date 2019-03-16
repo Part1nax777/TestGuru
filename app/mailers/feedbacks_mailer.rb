@@ -3,6 +3,8 @@ class FeedbacksMailer < ApplicationMailer
 
   def feedback_send(feedback)
     @feedback = feedback
+
+    mail from: @feedback
   end
 
 end
