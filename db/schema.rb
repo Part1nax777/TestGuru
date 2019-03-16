@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_171920) do
+ActiveRecord::Schema.define(version: 2019_02_12_210755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,16 +28,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_171920) do
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "gists", force: :cascade do |t|
-    t.bigint "question_id", null: false
-    t.bigint "user_id", null: false
-    t.string "gist_url", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["question_id"], name: "index_gists_on_question_id"
-    t.index ["user_id"], name: "index_gists_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -68,7 +58,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_171920) do
     t.bigint "category_id", null: false
     t.integer "author_id", null: false
     t.index ["category_id"], name: "index_tests_on_category_id"
-    t.index ["complexity", "title"], name: "index_tests_on_complexity_and_title", unique: true
     t.index ["title", "complexity"], name: "index_tests_on_title_and_complexity", unique: true
   end
 
@@ -100,8 +89,6 @@ ActiveRecord::Schema.define(version: 2019_03_14_171920) do
   end
 
   add_foreign_key "answers", "questions"
-  add_foreign_key "gists", "questions"
-  add_foreign_key "gists", "users"
   add_foreign_key "questions", "tests"
   add_foreign_key "test_passages", "questions", column: "current_question_id"
   add_foreign_key "test_passages", "tests"
