@@ -31,7 +31,12 @@ en:
       test:
         prompt: "Please select category"
 
-
+  feedbacks:
+    new:
+      feedback: "Feedback"
+    create:
+      success: "Feedback send"
+      unsuccess: "Feedback not send"
   tests:
     index:
       header: "Tricky Tests"
@@ -78,6 +83,7 @@ en:
       login: "Log in"
       signup: "Sign up"
       admin_panel: "Admin panel"
+      feedback: "Feedback"
 
   services:
     gist_question_service:

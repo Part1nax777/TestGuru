@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   resources :tests, only: :index do
     post :start, on: :member
   end
+
+  resources :feedbacks, only: %i[new create]
 end

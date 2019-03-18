@@ -13,7 +13,8 @@ categories = Category.create!([
 users = User.create!([
   { name: 'Алеша Попович', email: 'ap@email.com', password: '123456' },
   { name: 'Барон Мюнхаузен', email: 'bm@email.com', password: '123456' },
-  { name: 'Винни Пух', email: 'vp@email.com', password: '123456' }
+  { name: 'Винни Пух', email: 'vp@email.com', password: '123456' },
+  { name: 'Admin', email: 'rsathinknetica@gmail.com', password: '123456', type: 'Admin', first_name: 'Guru', last_name: 'TestGuru' }
 ])
 
 tests = Test.create!([
@@ -37,12 +38,23 @@ questions = Question.create!([
 
 answers = Answer.create!([
   { body: '2', question: questions[0] },
+  { body: '4', question: questions[0] },
+  { body: '6', question: questions[0] },
   { body: '1380', question: questions[1] },
   { body: '1672', question: questions[1] },
-  { body: 'Семейные', question: questions[2] },
-  { body: 'Машины и механизмы', question: questions[3] },
-  { body: 'Прага', question: questions[4] },
-  { body: 'Assembler', question: questions[0] }
+  { body: '1680', question: questions[1] },
+  { body: 'Семейные', question: questions[3] },
+  { body: 'Родственные', question: questions[3] },
+  { body: 'Дружественные', question: questions[3] },
+  { body: 'Машины и механизмы', question: questions[4] },
+  { body: 'Здания и сооружения', question: questions[4] },
+  { body: 'Вклады и счета в банке', question: questions[4] },
+  { body: 'Прага', question: questions[5] },
+  { body: 'Париж', question: questions[5] },
+  { body: 'Вена', question: questions[5] },
+  { body: 'Assembler', question: questions[6] },
+  { body: 'C++', question: questions[6] },
+  { body: 'Basic', question: questions[6] }
 ])
 
 
