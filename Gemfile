@@ -42,7 +42,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 
 #API
 gem "octokit", "~> 4.0"
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
 
 #JavaScript
 gem 'octicons_helper'
