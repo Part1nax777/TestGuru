@@ -1,0 +1,18 @@
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+
+      <p class="text-center">
+        <strong>Название награды:</strong>
+        <td><%= @badge.rule_params %></td>
+      </p>
+
+      <p class="text-center">
+
+        <td><%= image_tag @badge.badge_url %></td>
+      </p>
+
+   <%= link_to 'Назад', admin_badges_path %>
+   <%= link_to 'Редактировать', edit_admin_badge_path %>
+
+  </div>
+</div>

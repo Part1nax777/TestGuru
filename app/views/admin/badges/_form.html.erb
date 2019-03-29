@@ -1,0 +1,29 @@
+<%= form_with model: [:admin, @badge], locale: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <form>
+    <div class="form-group">
+    <p>
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.label :badge_url %>
+      <%= form.text_field :badge_url, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.label :rule %>
+      <%= form.select :rule, Badge::RULES, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.label :badge_params %>
+      <%= form.text_field :rule_params, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.submit class: 'btn btn-primary' %>
+    </p>
+  <% end %>
