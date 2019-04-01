@@ -1,6 +1,10 @@
 en:
 
   helpers:
+    badges:
+      test_from_first_try: "Test from first try"
+      tests_from_one_category: "Tests form one category"
+      test_from_one_complexity: "Tests from one complexity"
     submit:
       test:
         create: "Create test"

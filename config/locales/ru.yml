@@ -1,6 +1,10 @@
 ru:
 
   helpers:
+    badges:
+      test_from_first_try: "Тест с первой попытки"
+      tests_from_one_category: "Тесты одной категории"
+      test_from_one_complexity: "Тесты одной сложности"
     submit:
       test:
         create: "Создать тест"

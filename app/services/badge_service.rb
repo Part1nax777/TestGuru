@@ -24,8 +24,10 @@ class BadgeService
 
   def tests_from_one_category(category)
     return false if @test.category_id != category.to_i
-    test_ids = Test.where(category_id: category).ids
-    success_tests(test_ids) == test_ids.count
+    test_ids = Test.where(complexity: complexity).ids #массив из id тестов одинаковой сложности
+    success_tests_ids = @user.test_passages.where(test_id: test_ids).success.map(&:test_id) #массив из успешных тестов одного уровня пройденных пользователем
+    return false if success_tests_ids.include?(success_tests_ids.last) #если последний пройденный тест уже есть в массиве возвращаем false
+    test_ids == success_tests_ids.uniq #если массивы совпадают то true и присваивается бейдж
   end
 
   def success_tests(ids)
