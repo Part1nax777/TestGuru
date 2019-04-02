@@ -5,4 +5,6 @@ class Badge < ApplicationRecord
   has_many :users, through: :user_badges, dependent: :destroy
 
   validates :name, :badge_url, presence: true
+  validates :rule, inclusion: { in: RULES }
+  validates :rule, uniqueness: { scope: :rule_params }
 end

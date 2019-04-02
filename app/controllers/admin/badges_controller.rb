@@ -6,16 +6,13 @@ class Admin::BadgesController < ApplicationController
     @badges = Badge.all
   end
 
-  def show
-
-  end
+  def show; end
 
   def new
     @badge = Badge.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @badge = Badge.new(badge_params)
