@@ -2,7 +2,6 @@ class BadgeService
   def initialize(test_passage)
     @user = test_passage.user
     @test = test_passage.test
-    byebug
   end
 
   def select_badge
@@ -17,10 +16,7 @@ class BadgeService
     return false if @test.complexity != complexity.to_i
     test_ids = Test.where(complexity: complexity).ids
     success_tests_ids = @user.test_passages.where(test_id: test_ids).success.map(&:test_id)
-    id_last = success_tests_ids.last
-    success_tests_ids_not_last = success_tests_ids.reverse.drop(1).reverse
-    return false if success_tests_ids_not_last.include?(id_last)
-    test_ids == success_tests_ids.uniq
+    test_ids == success_tests_ids.uniq && success_tests_ids.group_by(&:itself).values.map(&:size).uniq.size == 1
   end
 
   def test_from_first_try(_test)
