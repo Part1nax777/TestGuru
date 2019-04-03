@@ -17,4 +17,8 @@ class Test < ApplicationRecord
   def self.with_array(title)
     with_category(title).pluck(:title)
   end
+
+  def have_timer?
+    timer.positive?
+  end
 end

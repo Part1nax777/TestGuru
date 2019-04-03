@@ -23,6 +23,9 @@
         <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
         <p><%= form.submit t('.next'), class: 'btn btn-indigo btn-sm m-0' %></p>
 
+        <% if @test_passage.test.have_timer? %>
+          <%= content_tag :bold, '0:00', class: 'timer', data: { time: @test_passage.time_left, id: @test_passage.id } %>
+        <% end %>
 
         <%= content_tag :div,
                         class: "progress",

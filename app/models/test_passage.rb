@@ -35,6 +35,14 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
+  def timeout?
+    Time.current > active_time
+  end
+
+  def time_left
+    (active_time - Time.current).to_i
+  end
+
   private
 
   def before_validation_set_current_question
@@ -55,5 +63,9 @@ class TestPassage < ApplicationRecord
     else
       test.questions.order(:id).where('id > ?', current_question.id).first
     end
+  end
+
+  def active_time
+    created_at + test.timer.seconds
   end
 end
