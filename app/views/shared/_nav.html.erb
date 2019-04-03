@@ -4,6 +4,7 @@
   <span class="navbar-text">
     <% if user_signed_in? %>
       <%= t('.welcome') %>, <b><%= current_user.email %></b> Guru |
+      <%= link_to 'Badges', badges_path %> |
 
       <% if current_user.type == 'Admin' %>
         <%= link_to t('.admin_panel'), admin_tests_path %> |

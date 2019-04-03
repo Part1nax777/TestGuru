@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: %i[index show destroy]
+    resources :badges
   end
 
   resources :test_passages, only: %i[show update] do
@@ -26,4 +27,5 @@ Rails.application.routes.draw do
   end
 
   resources :feedbacks, only: %i[new create]
+  resources :badges, only: :index
 end
