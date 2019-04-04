@@ -10,7 +10,7 @@ document.addEventListener('turbolinks:load', function() {
         timerTime -= 1;
       } else {
         alert('Время вышло!');
-        window.location.replace('/test_passages/' + userTestId + '/result');
+        document.getElementById('show_test_passage').submit();
       }
 
       var time = parseInt(timerTime / 60) + ":" + (timerTime % 60);

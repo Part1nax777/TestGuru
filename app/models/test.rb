@@ -7,6 +7,7 @@ class Test < ApplicationRecord
 
   validates :title, presence: true, uniqueness: { scope: :complexity, message: 'title with this complexity already exist' }
   validates :complexity, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
+  validates :timer, numericality: { greater_than_or_equal_to: 0 }
 
   scope :light_test, -> { where(complexity: 0..1) }
   scope :middle_test, -> { where(complexity: 2..4) }

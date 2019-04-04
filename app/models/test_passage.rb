@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   scope :success, -> { where('percent >= ?', PERCENT_SUCCESS) }
 
   def completed?
-    current_question.nil?
+    current_question.nil? || timeout?
   end
 
   def accept!(answer_ids)
