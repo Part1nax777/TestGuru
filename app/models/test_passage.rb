@@ -15,6 +15,8 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
+    return if current_question.nil?
+
     self.correct_questions += 1 if correct_answer?(answer_ids)
     self.percent = result_percent
     save!
