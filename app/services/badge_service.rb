@@ -2,12 +2,13 @@ class BadgeService
   def initialize(test_passage)
     @user = test_passage.user
     @test = test_passage.test
+    @test_passage = test_passage
 
   end
 
   def select_badge
     Badge.all.select do |badge|
-      send(badge.rule, badge.rule_params)
+      send(badge.rule, badge.rule_params) if @test_passage.time_fail?
     end
   end
 
