@@ -9,7 +9,7 @@ document.addEventListener('turbolinks:load', function() {
       if (timerTime > 0) {
         timerTime -= 1;
       } else {
-        clearInterval(timerTime);
+        clearInterval(timer);
         alert('Время вышло!');
         document.getElementById('answer_current_question_form').submit();
       }
