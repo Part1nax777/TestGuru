@@ -9,12 +9,13 @@ document.addEventListener('turbolinks:load', function() {
       if (timerTime > 0) {
         timerTime -= 1;
       } else {
+        clearInterval(timerTime);
         alert('Время вышло!');
-        document.getElementById('show_test_passage').submit();
+        document.getElementById('answer_current_question_form').submit();
       }
 
       var time = parseInt(timerTime / 60) + ":" + (timerTime % 60);
-      timer.innerHTML = time
+      timer.innerHTML = time;
 
     }, 1000)
   }

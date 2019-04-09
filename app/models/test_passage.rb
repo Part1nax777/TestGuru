@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   scope :success, -> { where('percent >= ?', PERCENT_SUCCESS) }
 
   def completed?
-    timeout
+    check_timer
     current_question.nil?
   end
 
@@ -36,8 +36,8 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
-  def timeout
-    current_question = nil if Time.current > active_time
+  def check_timer
+    self.current_question = nil if time_fail?
   end
 
   def time_left
@@ -45,7 +45,7 @@ class TestPassage < ApplicationRecord
   end
 
   def time_fail?
-    Time.current < active_time || 0
+    Time.current > active_time
   end
 
   private

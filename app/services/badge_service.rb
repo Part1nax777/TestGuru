@@ -8,7 +8,7 @@ class BadgeService
 
   def select_badge
     Badge.all.select do |badge|
-      send(badge.rule, badge.rule_params) if @test_passage.time_fail?
+      send(badge.rule, badge.rule_params) unless @test_passage.time_fail?
     end
   end
 
@@ -19,7 +19,6 @@ class BadgeService
     test_ids = Test.where(complexity: complexity).ids
     success_tests_ids = @user.test_passages.where(test_id: test_ids).success.map(&:test_id)
     test_ids.count == success_tests_ids.uniq.count && success_tests_ids.group_by(&:itself).values.map(&:size).uniq.size == 1
-
   end
 
   def test_from_first_try(_test)
