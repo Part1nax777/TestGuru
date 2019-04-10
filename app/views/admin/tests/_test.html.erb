@@ -5,6 +5,7 @@
   </td>
   <td class="text-center"><%= t(".level.#{test_level(test)}") %></td>
   <td class="text-center"><%= test.questions.count %></td>
+  <td class="text-center"><%= test.timer %></td>
   <td class="text-center"><%= link_to t('admin.actions.show'), admin_test_path(test) %></td>
   <td class="text-center">
     <%= link_to t('admin.actions.edit'),

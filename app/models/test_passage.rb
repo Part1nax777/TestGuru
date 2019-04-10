@@ -10,6 +10,7 @@ class TestPassage < ApplicationRecord
   scope :success, -> { where('percent >= ?', PERCENT_SUCCESS) }
 
   def completed?
+    check_timer
     current_question.nil?
   end
 
@@ -35,6 +36,18 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
+  def check_timer
+    self.current_question = nil if time_fail?
+  end
+
+  def time_left
+    (active_time - Time.current).to_i
+  end
+
+  def time_fail?
+    Time.current > active_time
+  end
+
   private
 
   def before_validation_set_current_question
@@ -55,5 +68,9 @@ class TestPassage < ApplicationRecord
     else
       test.questions.order(:id).where('id > ?', current_question.id).first
     end
+  end
+
+  def active_time
+    created_at + test.timer.seconds
   end
 end
