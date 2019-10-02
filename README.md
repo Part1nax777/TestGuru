@@ -1,14 +1,16 @@
-# README
-Приложение Test Guru включает в себя следующие сущности:
-
-- Тесты
-
-- Пользователи
-
-- Администраторы
-
-- Вопросы
-
-- Ответы
-
-- Результаты тестов
+- Task_2 - Introduction to Rails
+- Task_3 - Basics of Rails model
+- Task_4 - ActiveRecord query interface
+- Task_5 - Model associations
+- Task_6 - Validations and scope methods
+- Task_7 - REST architecture, Rails controllers, callbacks in controllers
+- Task_8 - Rails views
+- Task_9 - Callbacs in models. Transactions
+- Task_10 - Authentication in Rails, user sessions
+- Task_11 - Authentication with Devise. Rails Mailers
+- Task_12 - Localization in Rails
+- Task_13 - Twitter Bootstrap
+- Task_14 - External services API. Github API
+- Task_15 - JavaScript in Rails
+- Task_16 - Data attributes
+- Task_17 - Configure app for deploying on heroku 
